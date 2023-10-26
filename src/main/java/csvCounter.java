@@ -41,7 +41,7 @@ public class csvCounter {
             LOG.severe("No se puede leer documento HTML");
             System.exit(2);
         }
-        System.out.println("Total de lineas: " +  etqMa.getCSvCounter());
+        //System.out.println("Total de lineas en el fichero: " +  etqMa.getCSvCounter());
     }
 
 }

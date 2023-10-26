@@ -41,7 +41,7 @@ public class downloadThread extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName() + ": " +fileName );
+        //System.out.println(Thread.currentThread().getName() + ": " +fileName );
     }
 
 }
