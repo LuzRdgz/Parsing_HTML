@@ -36,7 +36,7 @@ public class etiquetasManejador extends HTMLEditorKit.ParserCallback {
         href = (String) attributes.getAttribute(HTML.Attribute.HREF);
         //System.out.printf("%d = %s: %s%n",hrefCounter, tagName, href );
         if (href.contains(".csv")){
-            //System.out.println(href);
+            System.out.println("> CSV Name File: " + href);
             String newUrl = csvCounter.THE_URL + href;
             //System.out.println(newUrl);
             downloadThread down = new downloadThread(newUrl);
@@ -54,7 +54,7 @@ public class etiquetasManejador extends HTMLEditorKit.ParserCallback {
             while (bf.readLine() != null){
                 hrefCounter++;
             }
-            System.out.println("Total de registros en el fichero '" + href + "': " + hrefCounter);
+            System.out.println("-- Total de registros en el fichero: " + hrefCounter);
         } catch (
                 FileNotFoundException e) {
             throw new RuntimeException(e);
