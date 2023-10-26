@@ -1,11 +1,10 @@
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class downloadThread {
+public class downloadThread extends Thread{
 
     private URL url;
 
@@ -39,10 +38,8 @@ public class downloadThread {
             }
             outputStream.close();
 
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException exception) {
-            exception.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + ": " +fileName );
     }
